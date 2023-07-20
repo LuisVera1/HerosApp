@@ -6,7 +6,7 @@ import MarvelPage from '../pages/MarvelPage';
 import Search from '../pages/Search';
 import HeroPage from '../pages/HeroPage';
 
-const HeroesRoutes = () => {
+export const HeroesRoutes = () => {
 	return (
 		<>
 			<Navbar />
@@ -24,5 +24,3 @@ const HeroesRoutes = () => {
 		</>
 	);
 };
-
-export default HeroesRoutes;

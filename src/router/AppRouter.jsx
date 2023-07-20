@@ -1,15 +1,13 @@
 import { Routes, Route } from 'react-router';
-
-import LoginPage from '../auth/pages/LoginPage';
-import HeroesRoutes from '../heroes/routes/HeroesRoutes';
+import { LoginPage } from '../auth/pages/LoginPage';
+import { HeroesRoutes } from '../heroes/routes/HeroesRoutes';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
-const AppRouter = () => {
+export const AppRouter = () => {
 	return (
 		<>
 			<Routes>
-				7
 				<Route
 					path="/login"
 					element={
@@ -30,5 +28,3 @@ const AppRouter = () => {
 		</>
 	);
 };
-
-export default AppRouter;
