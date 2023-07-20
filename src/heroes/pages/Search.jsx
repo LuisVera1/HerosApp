@@ -11,11 +11,14 @@ const Search = () => {
 	const { q = '' } = queryString.parse(location.search);
 	const heroes = getHeroesByName(q);
 
-	const { searchText, onInputChange, onResetForm } = useForm({ searchText: q });
+	// const { searchText, onInputChange, onResetForm } = useForm({ searchText: q });
+	const { searchText, onInputChange, onResetForm } = useForm({ searchText: '' });
 	// const [searchParams, setSearchParams] = useSearchParams('');
 	// const query = searchParams.get('q');
 
 	const onSearchSubmit = (event) => {
+		console.log('click');
+
 		event.preventDefault();
 		if (searchText.trim().length <= 1) return;
 
