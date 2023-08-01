@@ -17,8 +17,6 @@ const Search = () => {
 	// const query = searchParams.get('q');
 
 	const onSearchSubmit = (event) => {
-		console.log('click');
-
 		event.preventDefault();
 		if (searchText.trim().length <= 1) return;
 
@@ -36,7 +34,7 @@ const Search = () => {
 				<div className="col-5">
 					<h5>Searching</h5>
 					<hr />
-					<form onSubmit={onSearchSubmit}>
+					<form onSubmit={onSearchSubmit} aria-label="form">
 						<input
 							type="text"
 							placeholder="Search a hero"
@@ -57,7 +55,7 @@ const Search = () => {
 					{q === '' && <div className="alert alert-primary">Search a hero</div>}
 
 					{heroes.length === 0 && (
-						<div className="alert alert-danger">
+						<div className="alert alert-danger" data-testid="noHeroBox">
 							No hero with <b>{q}</b>
 						</div>
 					)}
